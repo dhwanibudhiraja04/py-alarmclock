@@ -1,4 +1,5 @@
 from datetime import datetime
+import time
 # from playsound import playsound
 
 alarm_time= input("Alarm Time in HH:MM:SS AM/PM format: ")
@@ -23,6 +24,8 @@ while True:
     validate= time_validity(alarm_time)
     if validate=="Ok!":
         print(f"Setting the alarm for {alarm_time}")
+        time.sleep(3)
+        print("Alarm set")
         break
     else: 
         print(validate)
